@@ -70,8 +70,8 @@ class Game extends Component {
     handleClick = event => {
         const elemOffset = this.getElementsOffset();
 
-        const offsetX = e.clientX - elemOffset.x;
-        const offsetY = e.clientY - elemOffset.y; 
+        const offsetX = event.clientX - elemOffset.x;
+        const offsetY = event.clientY - elemOffset.y; 
 
         const x = Math.floor(offsetX/cell_size);
         const y = Math.floor(offsetY/cell_size);
@@ -228,7 +228,7 @@ class Game extends Component {
 
                         {cells.map(cell => {
                             return (
-                                <Cell x={cell.x} y={cell.y} key={`${cell.x}, ${cell,y}`} />
+                                <Cell x={cell.x} y={cell.y} key={`${cell.x}, ${cell.y}`} />
                             )})}
                     </div>
                 </div>

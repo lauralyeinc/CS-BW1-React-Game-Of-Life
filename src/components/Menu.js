@@ -5,7 +5,7 @@ import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import About from './About.js';
-import rules from './rules';
+import Rules from './Rules.js';
 import { menuStyles } from "../styling/menu.js"; 
 
 const Accordion = withStyles({
