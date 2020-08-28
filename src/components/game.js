@@ -4,9 +4,9 @@ import Cell from './cell.js';
 import Menu from './Menu.js';
 
 // presets 
-import { preset1 } from './presets/preset1.js';
-import { preset2 } from './presets/preset2.js';
-import { preset3 } from './presets/preset3.js';
+import { preset1 } from './presets/preset1';
+import { preset2 } from './presets/preset2';
+import { preset3 } from './presets/preset3';
 
 
 const cell_size = 20;
