@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styling/Game.css";
+import "../styling/game.css";
 
 const Rules = () => {
     return (
