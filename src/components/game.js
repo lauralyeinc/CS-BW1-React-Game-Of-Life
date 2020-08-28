@@ -217,7 +217,7 @@ class Game extends Component {
                 <div className='title-board'>
                     <h1> Conway's Game of Life</h1>
 
-                    <div className='Board' style={{
+                    <div className='board' style={{
                         width: width,
                         height: height,
                         backgroundSize: `${cell_size}px ${cell_size}px`
@@ -249,10 +249,9 @@ class Game extends Component {
                     {/* preset buttons next! */}
                 </div>
 
-                {/* menu not done yet.  */}
-                {/* <div className='rightside'>
+                <div className='rightside'>
                     <Menu />
-                </div> */}
+                </div>
             </div>
         )
     }
