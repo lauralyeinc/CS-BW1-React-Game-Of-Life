@@ -56,7 +56,7 @@ class Game extends Component {
     }
 
     // calcuates position of the board elements
-    getElementsOffset() {
+    getElementOffset() {
         const rect = this.boardRef.getBoudingClientRect();
         const doc = document.documentElement;
 
