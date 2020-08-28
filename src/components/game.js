@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import '../styling/game.css';
 import Cell from './cell.js';
-import Menu from './menu.js';
+import Menu from './Menu.js';
 
 // presets 
-
+import { preset1 } from './presets/preset1.js';
+import { preset2 } from './presets/preset2.js';
+import { preset3 } from './presets/preset3.js';
 
 
 const cell_size = 20;
@@ -173,7 +175,38 @@ class Game extends Component {
         });
     }
 
-    //presets 
+    // Preset 1
+    preset1 = () => {
+        for (let y = 0; y < this.rows; y++) {
+            for (let x = 0; x < this.cols; x++) {
+
+            this.board[y][x] = preset1[y][x];
+            }
+        }
+        this.setState({ cells: this.makeCells() });
+    }
+
+  // Preset 2
+    preset2 = () => {
+        for (let y = 0; y < this.rows; y++) {
+            for (let x = 0; x < this.cols; x++) {
+
+            this.board[y][x] = preset2[y][x];
+            }
+        }
+        this.setState({ cells: this.makeCells() });
+    }
+
+  // Presets 3
+    preset3 = () => {
+        for (let y = 0; y < this.rows; y++) {
+            for (let x = 0; x < this.cols; x++) {
+
+            this.board[y][x] = preset3[y][x];
+            }
+        }
+        this.setState({ cells: this.makeCells() });
+    }
 
 
     render() {
