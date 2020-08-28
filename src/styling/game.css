@@ -1,0 +1,89 @@
+.main-div {
+    display: flex;
+    align-items: center;
+    background-image:
+    linear-gradient(rgba(143, 204, 204, 0.5),rgba(6, 36, 116, 0.5)),
+    url("https://images.pexels.com/photos/2756406/pexels-photo-2756406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position-y: center;
+}
+
+.title-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.cell {  
+    background: #039595;
+    position: absolute;
+}
+
+.board {
+    position: relative;  
+    margin: 0 auto;  
+    border-radius: 5px;
+    background-color: #000;
+    background-image:
+        linear-gradient(#2d4b96 1px, transparent 1px),
+        linear-gradient(90deg, #2d4b96 1px, transparent 1px);
+}
+
+.rules, .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about a {
+    margin-left: 5px;
+    color: white;
+}
+
+.about a:hover {
+    color: rgb(216, 173, 241);
+}
+
+.controls {
+    background: linear-gradient(#000, #062474);
+    color: #90cccc;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    width: 150px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: -65px;
+    margin-left: 20px;
+}
+
+.controls input {
+    width: 100px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.controls p {
+    margin-top: 0px;
+}
+
+.button {
+    margin: 10px auto;
+    width: 100px;
+}
+
+.button:hover {
+    background-color: rgb(148, 147, 147);
+    color: #062474;
+}
+
+h1 {
+    background: linear-gradient(#000, #062474);
+    color: #90cccc;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px darkslategray;
+}
