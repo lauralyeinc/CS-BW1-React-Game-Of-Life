@@ -7,7 +7,7 @@ class Cell extends Component {
         const { x, y } = this.props;
 
         return(
-            <div className="Cell" style={{
+            <div className="cell" style={{
                 left: `${cell_size * x + 1}px`,
                 top: `${cell_size * y + 1}px`,
                 width: `${cell_size - 1}px`,
