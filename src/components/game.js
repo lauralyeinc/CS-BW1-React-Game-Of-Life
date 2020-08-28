@@ -246,7 +246,9 @@ class Game extends Component {
                     <button className="button" onClick={this.handleClear}> Clear </button>
                     <button className='button' onClick={this.isRunning ? '' : this.handleRandom}> Random </button>
 
-                    {/* preset buttons next! */}
+                    <button className="button" onClick={isRunning ? '' : this.preset1}>Preset 1</button>
+                    <button className="button" onClick={isRunning ? '' : this.preset2}>Preset 2</button>
+                    <button className="button" onClick={isRunning ? '' : this.preset3}>Preset 3</button>
                 </div>
 
                 <div className='rightside'>
