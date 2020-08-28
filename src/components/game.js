@@ -81,9 +81,10 @@ class Game extends Component {
             x <= this.cols &&
             y >= 0 &&
             y <= this.rows) {
-                this.board[y][x] = !this.board[y][x];
+
+            this.board[y][x] = !this.board[y][x];
             }
-            this.setState({ cells: this.makeCells() });
+        this.setState({ cells: this.makeCells() });
     }
 
     runGame = () => {
@@ -144,7 +145,7 @@ class Game extends Component {
 
         const dirs = [[-1, -1], [-1, 0], [-1, 1], [0, 1], [1, 1], [1, 0], [1, -1], [0, -1]]; 
 
-        for (let i = 0; i < dirs.length; i ++) {
+        for (let i = 0; i < dirs.length; i++) {
             const dir = dirs[i];
             let y1 = y + dir[0];
             let x1 = x + dir[1]; 
