@@ -32,7 +32,7 @@ class Game extends Component {
     makeEmptyBoard() {
         let board = [];
         for (let y = 0; y < this.rows; y++) {
-            board [y] = [];
+            board[y] = [];
 
             for (let x = 0; x < this.cols; x++ ) {
                 board[y][x] = false; 
@@ -42,7 +42,7 @@ class Game extends Component {
     }
 
     // creates the cell list from the board state
-    createsCells() {
+    makeCells() {
         let cells = [];
 
         for (let y = 0; y < this.rows; y++) {
@@ -68,7 +68,7 @@ class Game extends Component {
 
     // get the click position of the board element
     handleClick = event => {
-        const elemOffset = this.getElementsOffset();
+        const elemOffset = this.getElementOffset();
 
         const offsetX = event.clientX - elemOffset.x;
         const offsetY = event.clientY - elemOffset.y; 
@@ -110,7 +110,7 @@ class Game extends Component {
 
         // rules of the game
         for (let y = 0; y < this.rows; y++) {
-            for (let x = 0; x, this.cols; x++) {
+            for (let x = 0; x < this.cols; x++) {
 
                 let neighbors = this.calculateNeighbors(this.board, x, y);
 
@@ -139,7 +139,7 @@ class Game extends Component {
         }, this.state.interval);
     }
 
-    calculateNeighbors(board, y, x) {
+    calculateNeighbors(board, x, y) {
         let neighbors = 0;
 
         const dirs = [[-1, -1], [-1, 0], [-1, 1], [0, 1], [1, 1], [1, 0], [1, -1], [0, -1]]; 
@@ -147,13 +147,19 @@ class Game extends Component {
         for (let i = 0; i < dirs.length; i ++) {
             const dir = dirs[i];
             let y1 = y + dir[0];
-            let x1= x + dir[1]; 
+            let x1 = x + dir[1]; 
 
             if (x1 >= 0 && x1 < this.cols && y1 >= 0 && y1 < this.rows && board[y1][x1]) {
                 neighbors++;
             }
         }
         return neighbors; 
+    }
+
+    handleIntervalChange = event => {
+        this.setState({
+            interval: event.target.value
+        });
     }
 
     //randomize cells 
@@ -169,7 +175,7 @@ class Game extends Component {
     // clear the cells 
     handleClear = () => {
         this.board = this.makeEmptyBoard();
-        this.setState({ generationCount: 0})
+        // this.setState({ generationCount: 0}) ??
         this.setState({
             cells: this.makeCells()
         });
@@ -236,7 +242,7 @@ class Game extends Component {
                 <div className='controls'>
                     <p> Generate # {this.state.generationCount} </p> <br /> 
 
-                    <p> Update Every <br /> <input value={interval} onChange={this.handleIntervalChange} /> <br/> msec</p>
+                    <p> Update Every<br /> <input value={interval} onChange={this.handleIntervalChange} /><br/> msec</p>
 
                     {isRunning ? (
                         <button className='button' onClick={this.stopGame}> Stop </button> 
